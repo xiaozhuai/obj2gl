@@ -1,0 +1,35 @@
+/*
+ * auto created by obj2gl
+ *
+ * repo  : https://github.com/xiaozhuai/obj2gl
+ * obj   : {{=it.file}}
+ * faces : {{=it.data.numFaces}}
+ * verts : {{=it.data.numVerts}}
+ *
+ */
+
+#include "{{=it.name}}.h"
+
+int {{=it.name}}NumFaces = {{=it.data.numFaces}};
+
+int {{=it.name}}NumVerts = {{=it.data.numVerts}};
+
+float {{=it.name}}VertCoords[] = {
+    {{=it.data.vertCoords.chunk(3).map(floats => floats.join(', ')).join(', \n    ')}}
+};
+
+float {{=it.name}}NormalCoords[] = {
+    {{=it.data.normalCoords.chunk(3).map(floats => floats.join(', ')).join(', \n    ')}}
+};
+
+float {{=it.name}}TexCoords[] = {
+    {{=it.data.texCoords.chunk(2).map(floats => floats.join(', ')).join(', \n    ')}}
+};
+
+Obj2glVerts {{=it.name}}Verts = {
+    .numFaces = {{=it.name}}NumFaces,
+    .numVerts = {{=it.name}}NumVerts,
+    .vertCoords = {{=it.name}}VertCoords,
+    .normalCoords = {{=it.name}}NormalCoords,
+    .texCoords = {{=it.name}}TexCoords
+};

@@ -1,0 +1,13 @@
+{
+    "numFaces": {{=it.data.numFaces}},
+    "numVerts": {{=it.data.numVerts}},
+    "vertCoords": [
+        {{=it.data.vertCoords.chunk(3).map(floats => floats.join(', ')).join(', \n        ')}}
+    ],
+    "normalCoords": [
+        {{=it.data.normalCoords.chunk(3).map(floats => floats.join(', ')).join(', \n        ')}}
+    ],
+    "texCoords": [
+        {{=it.data.texCoords.chunk(2).map(floats => floats.join(', ')).join(', \n        ')}}
+    ]
+}

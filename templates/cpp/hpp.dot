@@ -1,0 +1,31 @@
+/*
+ * auto created by obj2gl
+ *
+ * repo  : https://github.com/xiaozhuai/obj2gl
+ * obj   : {{=it.file}}
+ * faces : {{=it.data.numFaces}}
+ * verts : {{=it.data.numVerts}}
+ *
+ */
+
+#ifndef OBJ2GL_OBJ2GLVERTS
+#define OBJ2GL_OBJ2GLVERTS
+
+typedef struct {
+    int numFaces;
+    int numVerts;
+    float *vertCoords;
+    float *normalCoords;
+    float *texCoords;
+} Obj2glVerts;
+
+#endif
+
+
+
+#ifndef OBJ2GL_{{=it.name.toUpperCase()}}
+#define OBJ2GL_{{=it.name.toUpperCase()}}
+
+extern Obj2glVerts {{=it.name}}Verts;
+
+#endif
