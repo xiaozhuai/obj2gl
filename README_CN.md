@@ -11,3 +11,7 @@
 ```
 obj2gl --format cpp --input model/cube.obj
 ```
+
+# 下载
+
+请从release页面下载编译好的二进制版本
